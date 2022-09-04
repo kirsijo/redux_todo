@@ -21,12 +21,12 @@ const todoReducer = createSlice({
                 state.taskList = taskList.filter((item) =>
                 item.id !== action.payload.id);
             },
-            editTodo: (state,action) => {
+            editTask: (state,action) => {
                 let {taskList} = state;
                 state.taskList = taskList.map((item) => item.id === action.payload.id ? action.payload : item);
             }
         },
 })
 
-export const { addTask, deleteTask, editTodo } = todoReducer.actions
+export const { addTask, deleteTask, editTask } = todoReducer.actions
 export default todoReducer.reducer;
