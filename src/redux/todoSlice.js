@@ -1,6 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit';
 
-const todoSLice = createSlice({
+const todoReducer = createSlice({
     name: "tasks",
     initialState:{
         taskList: [
@@ -10,23 +10,23 @@ const todoSLice = createSlice({
         },
         reducers: {
             addTask: (state,action) => {
-                let newTodoList = {
+                let newtaskList = {
                     id: Math.random(),
                     content: action.payload.newContent
                 }
-                state.toDoList.push(newTodoList);
+                state.taskList.push(newtaskList);
             },
             deleteTodo: (state,action) => {
-                let {toDoList} = state;
-                state.toDoList = toDoList.filter((item) =>
+                let {taskList} = state;
+                state.taskList = taskList.filter((item) =>
                 item.id !== action.payload.id);
             },
             editTodo: (state,action) => {
-                let {todoList} = state;
-                state.toDoList = toDoList.map((item) => item.id === action.payload.id ? action.payload : item);
+                let {taskList} = state;
+                state.taskList = taskList.map((item) => item.id === action.payload.id ? action.payload : item);
             }
         },
 })
 
-export const { addToDo, deleteToDo, editTodo } = toDoSlider.actions
-export default toDoSlider.reducer;
+export const { addTask, deleteToDo, editTodo } = todoReducer.actions
+export default todoReducer.reducer;
