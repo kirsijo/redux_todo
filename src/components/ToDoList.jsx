@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteToDo, editTodo } from '../redux/todoSlice';
+import { deleteTask, editTodo } from '../redux/todoSlice';
 
 const ToDoList = () => {
   const { taskList } = useSelector((state) => state.toDo);
@@ -56,8 +56,8 @@ return (
           <span className='content'>{content}</span>
           <span className='todo-action'>  
             <div className="close" 
-              onClick={() => dispatch(deleteToDo({id}))}
-            />
+              onClick={() => dispatch(deleteTask({id}))}
+            >delete</div>
             <div className="edit" 
               onClick={() =>onEditToggle(id, content)} 
             />

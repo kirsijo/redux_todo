@@ -16,7 +16,7 @@ const todoReducer = createSlice({
                 }
                 state.taskList.push(newtaskList);
             },
-            deleteTodo: (state,action) => {
+            deleteTask: (state,action) => {
                 let {taskList} = state;
                 state.taskList = taskList.filter((item) =>
                 item.id !== action.payload.id);
@@ -28,5 +28,5 @@ const todoReducer = createSlice({
         },
 })
 
-export const { addTask, deleteToDo, editTodo } = todoReducer.actions
+export const { addTask, deleteTask, editTodo } = todoReducer.actions
 export default todoReducer.reducer;
