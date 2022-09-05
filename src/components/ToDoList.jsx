@@ -55,13 +55,13 @@ return (
         return <li className='grid' key={id}>
           <span className='content'>{content}</span>
           <span className='todo-action'>  
-            <div className="close" 
+            <button className="close" 
               onClick={() => dispatch(deleteTask({id}))}
-            >Delete</div>
-            <div className="edit" 
+            >Delete</button>
+            <button className="edit" 
               onClick={() =>onEditToggle(id, content)} 
             > Edit
-            </div>
+            </button>
            </span>
        </li>
      })

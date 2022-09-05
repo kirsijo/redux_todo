@@ -4,10 +4,11 @@
   --secondary: #0A0B5B;
 }
 /* reset */
-body,p,a,ul,li{
+* {
  margin: 0;
  padding: 0;
  text-decoration: none;
+ font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 li{
  list-style-type: none;
@@ -17,12 +18,22 @@ body{
  background: var(--secondary);
  overflow-x: hidden;
 }
+
+button {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--primary);
+  background-color: var(--secondary);
+  color: var(--primary);
+}
 .button{
  background: none;
+ margin: 15px;
  border: 2px solid var(--primary);
  color: var(--primary);
  padding: 6px 12px;
- border-radius: 10px;
+ border-radius: 5px;
  text-transform: uppercase;
  box-shadow: 1px 2px 3px rgba(0,0,0,0.6);
  display: inline-block;
@@ -46,7 +57,7 @@ input{
  text-align: left;
  margin-left: 2px;
 }
-/* fonts */
+
 body{
  color: #f2f2f2;
 }
