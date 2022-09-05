@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# My first app using React Redux Toolkit
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple app following this tutorial:
+https://bapunawarsaddam.medium.com/to-do-app-with-react-redux-toolkit-47b7dc44bd90
 
 ## Available Scripts
 
