@@ -10,8 +10,6 @@ const ToDoList = () => {
    id: '', content: '', contentError: null
   });
 
-
-
   const onEditToggle = ( id, content) => {
    setEditing(true);
    setState({ ...state, id, content});
